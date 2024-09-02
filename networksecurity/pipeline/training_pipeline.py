@@ -128,5 +128,13 @@ class TrainingPipeline:
             
             model_trainer_artifact=self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
             
+            
+            model_eval_artifact=self.start_model_evaluation(data_validation_artifact=data_validation_artifact,model_trainer_artifact=model_trainer_artifact)
+            if not model_eval_artifact.is_model_accepted:
+                #raise Exception("Trained model is not better than the best model")
+                print("Trained model is not better than the best model")
+            print(model_eval_artifact)
+            
+            
         except Exception as e:
             raise  NetworkSecurityException(e,sys)
