@@ -9,6 +9,6 @@ dill
 pyyaml
 xgboost
 mlflow
-
+fastapi
 
 -e .
