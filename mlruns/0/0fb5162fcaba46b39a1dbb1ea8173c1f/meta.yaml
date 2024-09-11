@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Network_Security/mlruns/0/0fb5162fcaba46b39a1dbb1ea8173c1f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0fb5162fcaba46b39a1dbb1ea8173c1f
+run_name: mysterious-loon-434
+run_uuid: 0fb5162fcaba46b39a1dbb1ea8173c1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726059642868
+status: 1
+tags: []
+user_id: Administrator
