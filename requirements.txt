@@ -13,6 +13,6 @@ fastapi
 uvicorn
 ipykernel
 apache-airflow
-
+dvc
 
 -e .

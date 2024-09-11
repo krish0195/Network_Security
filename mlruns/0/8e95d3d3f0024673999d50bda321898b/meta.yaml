@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Network_Security/mlruns/0/8e95d3d3f0024673999d50bda321898b/artifacts
+end_time: 1726044479022
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8e95d3d3f0024673999d50bda321898b
+run_name: bright-calf-32
+run_uuid: 8e95d3d3f0024673999d50bda321898b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726044428416
+status: 3
+tags: []
+user_id: Administrator
