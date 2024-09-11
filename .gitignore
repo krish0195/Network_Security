@@ -4,5 +4,7 @@ logs
 networksecurity.egg-info
 Artifacts
 __pycache__
-
+/.env
+mlruns
+saved_models
 
