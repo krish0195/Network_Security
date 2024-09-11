@@ -9,8 +9,8 @@ load_dotenv()
 mongo_db_url = os.getenv("MONGODB_URL_KEY")
 print(mongo_db_url)
 
-AWS_ACCESS_KEY_ID=os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY=os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_ACCESS_KEY_ID=os.getenv("AWS_ACCESS_KEY_ID_ENV_KEY")
+AWS_SECRET_ACCESS_KEY=os.getenv("AWS_SECRET_ACCESS_KEY_ENV_KEY")
 
 os.environ["AWS_ACCESS_KEY_ID"]=AWS_ACCESS_KEY_ID
 os.environ["AWS_SECRET_ACCESS_KEY"]=AWS_SECRET_ACCESS_KEY
@@ -72,7 +72,7 @@ async def train_route():
     except Exception as e:
             raise NetworkSecurityException(e,sys)
     
-
+'''
 @app.post("/predict")
 async def predict_route(request: Request,file: UploadFile = File(...)):
     try:
@@ -92,6 +92,7 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
         
     except Exception as e:
             raise NetworkSecurityException(e,sys)
+'''
 
 """def main():
     try:
