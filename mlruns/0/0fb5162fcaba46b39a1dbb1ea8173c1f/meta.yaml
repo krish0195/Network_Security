@@ -1,5 +1,5 @@
 artifact_uri: file:///C:/Network_Security/mlruns/0/0fb5162fcaba46b39a1dbb1ea8173c1f/artifacts
-end_time: null
+end_time: 1726059666293
 entry_point_name: ''
 experiment_id: '0'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1726059642868
-status: 1
+status: 3
 tags: []
 user_id: Administrator
