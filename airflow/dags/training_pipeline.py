@@ -3,8 +3,10 @@ import json
 from textwrap import dedent
 import pendulum
 import os
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -14,7 +16,7 @@ with DAG(
     # [END default_args]
     description='network security pipeline',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2024,9,12, tz="UTC"),
+    start_date=pendulum.datetime(2024,8,31, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:
