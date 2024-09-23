@@ -15,14 +15,14 @@ with DAG(
     # [END default_args]
     description='Network Security Prediction',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2024, 9, 1, tz="UTC"),
+    start_date=pendulum.datetime(2024, 9, 23, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:
 
     
     def download_files(**kwargs):
-        bucket_name = "my-network-datasource"
+        bucket_name = "my-network-datasource0196"
         input_dir = "/app/input_files"
         #creating directory
         os.makedirs(input_dir,exist_ok=True)
