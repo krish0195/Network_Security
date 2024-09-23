@@ -85,13 +85,17 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-      
+
       
       - name: Pull latest images
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-     
+      - name: Stop and remove network container if running
+        run: |
+         docker ps -q --filter "name=networksecurity04" | grep -q . && docker stop networksecurity04 && docker rm -fv networksecurity04
+
+
 
       - name: Run Docker Image to serve users
         run: |
