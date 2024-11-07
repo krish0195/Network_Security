@@ -16,7 +16,7 @@ with DAG(
     # [END default_args]
     description='network security pipeline',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2024,9,23, tz="UTC"),
+    start_date=pendulum.datetime(2024,11,7, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:
@@ -48,4 +48,4 @@ with DAG(
 
     )
 
-    training_pipeline >> sync_data_to_s3
+    training_pipeline >> sync_data_to_s3 #dag flow

@@ -70,7 +70,7 @@ async def train_route():
         return Response("Training successful !!")
     except Exception as e:
             raise NetworkSecurityException(e,sys)
-
+''''
 @app.post("/predict")
 async def predict_route(request: Request,file: UploadFile = File(...)):
     try:
@@ -94,6 +94,7 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
 
 """def main():
     try:
+    
         training_pipeline = TrainingPipeline()
         model = training_pipeline.run_pipeline(model_dir=SAVED_MODEL_DIR) 
     except Exception as e:
