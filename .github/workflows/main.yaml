@@ -85,26 +85,20 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-
-      
+         
+            
       - name: Pull latest images
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-<<<<<<< HEAD
-    #  - name: Stop and remove network container if running
-    #   run: |
-    #     docker ps -q --filter "name=networksecurity04" | grep -q . && docker stop networksecurity04 && docker rm -fv networksecurity04
-=======
-   #   - name: Stop and remove network container if running
-   #    run: |
-   #    docker ps -q --filter "name=networksecurity04" | grep -q . && docker stop networksecurity04 && docker rm -fv networksecurity04
->>>>>>> c73cea94945a6acf3c04ffe1f0f686659278b677
-
+      #- name: Stop and remove network container if running
+      #  run: |
+      #   docker ps -q --filter "name=networksecurity" | grep -q . && docker stop networksecurity && docker rm -fv networksecurity
+       
       - name: Run Docker Image to serve users
         run: |
-         docker run -d -p 80:8080 --name=networksecurity04 -e 'MONGO_DB_URL=${{ secrets.MONGO_DB_URL }}' -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' -e 'AWS_REGION=${{ secrets.AWS_REGION }}'  ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
-     
+         docker run -d -p 80:8080 --name=networksecurity -e 'MONGO_DB_URL=${{ secrets.MONGO_DB_URL }}' -e 'AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}' -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' -e 'AWS_REGION=${{ secrets.AWS_REGION }}'  ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+
       - name: Clean previous images and containers
         run: |
          docker system prune -f
