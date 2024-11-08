@@ -91,9 +91,15 @@ jobs:
         run: |
          docker pull ${{secrets.AWS_ECR_LOGIN_URI}}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
+<<<<<<< HEAD
     #  - name: Stop and remove network container if running
     #   run: |
     #     docker ps -q --filter "name=networksecurity04" | grep -q . && docker stop networksecurity04 && docker rm -fv networksecurity04
+=======
+   #   - name: Stop and remove network container if running
+   #    run: |
+   #    docker ps -q --filter "name=networksecurity04" | grep -q . && docker stop networksecurity04 && docker rm -fv networksecurity04
+>>>>>>> c73cea94945a6acf3c04ffe1f0f686659278b677
 
       - name: Run Docker Image to serve users
         run: |
